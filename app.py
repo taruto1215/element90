@@ -11,7 +11,7 @@ from linebot.exceptions import (
 )
 from linebot.models import (
     FollowEvent, UnfollowEvent, MessageEvent, PostbackEvent,
-    TextMessage, TextSendMessage, TemplateSendMessage,
+    TextMessage, TextSendMessage, ImageSendMessage, TemplateSendMessage,
     ButtonsTemplate, CarouselTemplate, CarouselColumn,
     PostbackTemplateAction
 )
