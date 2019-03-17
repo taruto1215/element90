@@ -85,15 +85,6 @@ def handle_message(event):
 
 if __name__ == "__main__":
 
-    argv = ""
-    try:
-        argv = sys.argv[1]
-    except:
-        argv = "F"
-
-    if argv == "T":
-        go_weather()
-
     #    app.run()
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port)

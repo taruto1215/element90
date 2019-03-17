@@ -51,8 +51,8 @@ handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 #conn.close()
 #============================================
 
-@app.route('/')
-def hello_world():
+@app.route('/test')
+def test():
     return('Hello world')
 
 #to notify LINE API of existing this application
