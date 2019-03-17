@@ -29,6 +29,8 @@ import codecs
 import sys
 import schedule
 import time
+import element
+
 
 app = Flask(__name__)
 
@@ -77,10 +79,12 @@ def callback():
 #a response when a message came
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-
+    
+    message = element.get_ele(event.message.text)
+    
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text=message))
 
 
 if __name__ == "__main__":
