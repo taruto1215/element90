@@ -15,7 +15,6 @@ from linebot.models import (
     ButtonsTemplate, CarouselTemplate, CarouselColumn,
     PostbackTemplateAction
 )
-from argparse import ArgumentParser
 try:
     import MySQLdb
 except:
@@ -23,41 +22,39 @@ except:
     pymysql.install_as_MySQLdb()
     import MySQLdb
 import json
-import pymatgen
 import os
 import codecs
 import sys
 import schedule
 import time
+
+#=======module you made========
 import element
+#==============================
 
-
+#Flask+++++++++++++++++++++++++
 app = Flask(__name__)
+#++++++++++++++++++++++++++++++
 
-#環境変数取得
+#環境変数取得=====================================================
 YOUR_CHANNEL_ACCESS_TOKEN = os.getenv('LINE_CHANNEL_ACCESS_TOKEN')
 YOUR_CHANNEL_SECRET =  os.getenv('LINE_CHANNEL_SECRET')
+#=================================================================
 
+#Read Access token and channel secret=============================
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
+#=================================================================
 
-#Connect database============================
-#conn = MySQLdb.connect(user=REMOTE_DB_USER, passwd=REMOTE_DB_PASS, host=REMOTE_HOST, db=REMOTE_DB_NAME,charset='utf8')
-#c = conn.cursor()
-
-#sql = "SELECT user_id FROM heroku_8c9218b20533f08"
-#c.execute(sql)
-#userid = c.fetchall()
-
-#c.close()
-#conn.close()
-#============================================
-
+#This is test part
+#If it shows 'Hello world' when you access 'https://element90bot.herokuapp.com/test', it work well++
 @app.route('/test')
 def test():
     return('Hello world')
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#to notify LINE API of existing this application
+
+#To notify LINE API of existing this application+++++++++++++++++
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
@@ -74,9 +71,9 @@ def callback():
         abort(400)
 
     return 'OK'
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
-#a response when a message came
+#Responses when a message came=================
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
@@ -85,10 +82,10 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=message))
+#=============================================
 
-
+#Execute this application here++++++++++++++++
 if __name__ == "__main__":
-
-    #    app.run()
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+#+++++++++++++++++++++++++++++++++++++++++++++
