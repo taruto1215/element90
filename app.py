@@ -88,7 +88,7 @@ def handle_message(event):
             event.reply_token,
             image_message = ImageSendMessage(
                 original_content_url='https://element90bot.herokuapp.com/periodic_table.jpeg',
-                preview_image_url='https://element90bot.herokuapp.com/periodic_table.jpeg'))
+                preview_image_url='https://element90bot.herokuapp.com/periodic_table_preview.jpeg'))
 
 #=============================================
 
