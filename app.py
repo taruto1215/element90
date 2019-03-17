@@ -82,6 +82,13 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=message))
+
+    if message == '周期表':
+    image_message = ImageSendMessage(
+        original_content_url='https://element90bot.herokuapp.com/periodic_table.jpeg'
+        preview_image_url='https://element90bot.herokuapp.com/periodic_table.jpeg'
+    )
+
 #=============================================
 
 #Execute this application here++++++++++++++++
