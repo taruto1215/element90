@@ -1,0 +1,12 @@
+{
+"CHANNEL_SECRET":"PM/kut3ciNOI2A5G/+Kc+/94C/4S7lBZCSodegC+QSTFL+PhbOda6mm9liZ+P9TqYKKCemLWuagNiU7Fz1J35kn8Z1eLuOCIGW3Ku4ywh4w+Bir1hRJIn+T7oX085hHB\
+P/Ujh2PchBNu6iqch3g/8wdB04t89/1O/w1cDnyilFU=",
+"CHANNEL_ACCESS_TOKEN":"7a2a119a576e9b5275d7fa946ecf2a60",
+
+"REMOTE_HOST": "us-cdbr-iron-east-03.cleardb.net",
+"REMOTE_DB_NAME": "heroku_8c9218b20533f08",
+"REMOTE_DB_USER": "bd1bbe33125ad7",
+"REMOTE_DB_PASS": "8ee0093c",
+"REMOTE_DB_TB": "Usertable",
+"COMMENT": "3306",
+}
