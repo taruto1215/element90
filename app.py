@@ -80,7 +80,7 @@ def handle_message(event):
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text='Yes, We can'))
+        TextSendMessage(text=message))
 
 
 if __name__ == "__main__":
