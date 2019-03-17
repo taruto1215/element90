@@ -85,9 +85,9 @@ def handle_message(event):
 
     if message == '周期表':
         image_message = ImageSendMessage(
-            original_content_url='https://element90bot.herokuapp.com/periodic_table.jpeg'
+            original_content_url='https://element90bot.herokuapp.com/periodic_table.jpeg',
             preview_image_url='https://element90bot.herokuapp.com/periodic_table.jpeg'
-            )   
+            )
 
 #=============================================
 
