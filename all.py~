@@ -6,6 +6,11 @@ from pymatgen.core.periodic_table import Element
 
 
 def get_name():
+    
+    list = ['Atomic mass','Atomic no','Atomic radius','Atomic radius','Boiling point','Brinell hardness','Bulk modulus','Coefficient of linear thermal expansion','Electronic structure','ICSD oxi\
+dation states','Liquid range','Melting point','Melting point','Mineral hardness','Molar volume','Molar volume','Oxidation states','Poissons ratio','Reflectivity','Refractive index','Rigidity modulus','Supercond\
+ction temperature','Thermal conductivity', 'Van der waals radius','Velocity of sound','Vickers hardness','X','Youngs modulus','Metallic radius']  
+
     ele_name = open("element_name","w")
 
     with open("element_name_from_web","r") as file:
