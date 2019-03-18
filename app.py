@@ -88,7 +88,7 @@ def handle_message(event):
             event.reply_token,
             ImageSendMessage(
                 original_content_url='https://en.wikipedia.org/wiki/History_of_the_periodic_table#/media/File:Periodic_table_(18-col,_enwiki),_black_and_white.png',
-                preview_image_url='https://en.wikipedia.org/wiki/History_of_the_periodic_table#/media/File:Periodic_table_(18-col,_enwiki),_black_and_white.png'
+                preview_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg/200px-Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg.png'
                 )
             )
 
