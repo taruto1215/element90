@@ -87,8 +87,8 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             ImageSendMessage(
-                original_content_url='periodic_table.jpeg',
-                preview_image_url='periodic_table_preview.jpeg'))
+                original_content_url='https://git.heroku.com/element90bot.git/periodic_table.jpeg',
+                preview_image_url='https://git.heroku.com/element90bot.git/periodic_table_preview.jpeg'))
 
 #=============================================
 
