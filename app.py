@@ -94,7 +94,11 @@ def handle_message(event):
         messages = imagesendmessage()
         line_bot_api.reply_message(
             event.reply_token,
-            messages)
+            mageSendMessage(
+                original_content_url='https://i2.wp.com/rikamato.com/wp-content/uploads/2016/06/periodic.jpg?resize=300%2C212',
+                preview_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg/200px-Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg.png'
+            )
+        )
 
 #preview_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg/200px-Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg.png'
 #=============================================
