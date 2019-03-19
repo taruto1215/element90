@@ -95,8 +95,8 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             ImageSendMessage(
-                original_content_url='https://i2.wp.com/rikamato.com/wp-content/uploads/2016/06/periodic.jpg?resize=300%2C212',
-                preview_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg/200px-Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg.png'
+                original_content_url='https://github.com/taruto1215/element90/blob/master/240px-Periodic_table_(18-col%2C_enwiki)%2C_black_and_white.png',
+                preview_image_url='https://github.com/taruto1215/element90/blob/master/200px-Electron_shell_001_Hydrogen_(diatomic_nonmetal)_-_no_label.svg.png'
             )
         )
 
