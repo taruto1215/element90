@@ -74,7 +74,7 @@ def callback():
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #Responses when a message came=================
-@handler.add(MessageEvent, message= Message)
+@handler.add(MessageEvent, message= TextMessage)
 def handle_message(event):
 
     message = element.get_ele(event.message.text.rstrip())
