@@ -77,6 +77,11 @@ def callback():
 @handler.add(MessageEvent, message= TextMessage)
 def handle_message(event):
 
+"""
+Be careful, you cannot use event.*** two times,
+    you can use event.*** only one time
+"""
+
     if (event.message.text == '周期表') or (event.message.text == 'periodic table'):
 #        image_message = imagesendmessage()
         line_bot_api.reply_message(
