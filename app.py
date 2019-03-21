@@ -82,23 +82,24 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             ImageSendMessage(
-                original_content_url='https://cdn.aprico-media.com/production/posts/eyecatches/000/000/687/thumb.png',
-                preview_image_url='https://cdn.aprico-media.com/production/posts/eyecatches/000/000/687/thumb.png'
+                original_content_url='https://en.wikipedia.org/wiki/History_of_the_periodic_table#/media/File:Periodic_table_(18-col,_enwiki),_black_and_white.png',
+                preview_image_url='https://raw.githubusercontent.com/taruto1215/element90/master/200px-Electron_shell_001_Hydrogen_(diatomic_nonmetal)_-_no_label.svg.png'
             )
         )
 
-    message = element.get_ele(event.message.text.rstrip())
+    else:
+        message = element.get_ele(event.message.text.rstrip())
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=message + event.reply_token))
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=message + event.reply_token))
 
-    def imagesendmessage():
-        image_message = ImageSendMessage(
-            original_content_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg',
-            preview_image_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg'
-        )
-        return (image_message)
+#    def imagesendmessage():
+#        image_message = ImageSendMessage(
+#            original_content_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg',
+#            preview_image_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg'
+#        )
+#        return (image_message)
 
 
 #preview_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg/200px-Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg.png'
