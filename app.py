@@ -85,8 +85,8 @@ def handle_message(event):
 
     def imagesendmessage():
         messages = ImageSendMessage(
-            original_content_url='https://i2.wp.com/rikamato.com/wp-content/uploads/2016/06/periodic.jpg?resize=300%2C212',
-            preview_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg/200px-Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg.png'
+            original_content_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg',
+            preview_image_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg'
         )
         return (messages)
 
@@ -94,10 +94,7 @@ def handle_message(event):
         messages = imagesendmessage()
         line_bot_api.reply_message(
             event.reply_token,
-            ImageSendMessage(
-                original_content_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg',
-                preview_image_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg'
-            )
+            messages
         )
 
 #preview_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg/200px-Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg.png'
