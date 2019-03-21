@@ -13,7 +13,7 @@ from linebot.models import (
     FollowEvent, UnfollowEvent, MessageEvent, PostbackEvent,
     TextMessage, TextSendMessage, ImageSendMessage, TemplateSendMessage,
     ButtonsTemplate, CarouselTemplate, CarouselColumn,
-    PostbackTemplateAction
+    PostbackTemplateAction, ImageMessage
 )
 try:
     import MySQLdb
@@ -83,6 +83,7 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=message))
 
+@handler.add(MessageEvent, message=ImageMessage)
     def imagesendmessage():
         image_message = ImageSendMessage(
             original_content_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg',
