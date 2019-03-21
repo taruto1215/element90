@@ -82,7 +82,7 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             ImageSendMessage(
-                original_content_url='https://raw.githubusercontent.com/taruto1215/element90/master/240px-Periodic_table_(18-col%2C_enwiki)%2C_black_and_white.png',
+                original_content_url='https://raw.githubusercontent.com/taruto1215/element90/master/Periodic_table_(18-col%2C_enwiki)%2C_black_and_white.png',
                 preview_image_url='https://raw.githubusercontent.com/taruto1215/element90/master/240px-Periodic_table_(18-col%2C_enwiki)%2C_black_and_white.png'
             )
         )
