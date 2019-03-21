@@ -85,7 +85,7 @@ def handle_message(event):
 
     def imagesendmessage():
         image_message = ImageSendMessage(
-            original_content_url='http://res.cloudinary.com/demo/image/upload/w_250,h_250,c_fill,f_auto/seagull.jpg',
+            original_content_url='https://cdn.aprico-media.com/production/posts/eyecatches/000/000/687/thumb.png',
             preview_image_url='https://cdn.aprico-media.com/production/posts/eyecatches/000/000/687/thumb.png'
         )
         return (image_message)
