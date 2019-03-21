@@ -77,6 +77,16 @@ def callback():
 @handler.add(MessageEvent, message= TextMessage)
 def handle_message(event):
 
+    if (event.message.text == '周期表') or (event.message.text == 'periodic table'):
+#        image_message = imagesendmessage()
+        line_bot_api.reply_message(
+            event.reply_token,
+            ImageSendMessage(
+                original_content_url='https://cdn.aprico-media.com/production/posts/eyecatches/000/000/687/thumb.png',
+                preview_image_url='https://cdn.aprico-media.com/production/posts/eyecatches/000/000/687/thumb.png'
+            )
+        )
+
     message = element.get_ele(event.message.text.rstrip())
 
     line_bot_api.reply_message(
@@ -90,15 +100,6 @@ def handle_message(event):
         )
         return (image_message)
 
-    if (event.message.text == '周期表') or (event.message.text == 'periodic table'):
-        image_message = imagesendmessage()
-        line_bot_api.reply_message(
-            event.reply_token,
-            ImageSendMessage(
-                original_content_url='https://cdn.aprico-media.com/production/posts/eyecatches/000/000/687/thumb.png',
-                preview_image_url='https://cdn.aprico-media.com/production/posts/eyecatches/000/000/687/thumb.png'
-            )
-        )
 
 #preview_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg/200px-Electron_shell_001_Hydrogen_%28diatomic_nonmetal%29_-_no_label.svg.png'
 #=============================================
